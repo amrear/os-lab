@@ -79,9 +79,6 @@ int main(int argc, char *argv[])
 
     printf("Integral of f(x) = 10|sin(0.25x)| on the interval [0, 10] is roughly %.15lf.\n", integral);
 
-    sem_close(s_children);
-    sem_close(s_parent);
-
     munmap(partial_integral, sizeof(double));
     munmap(s_children, sizeof(double));
     munmap(s_parent, sizeof(double));
